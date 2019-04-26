@@ -1034,6 +1034,9 @@ spec:
   containers:
   - name: trident-installer
     image: {TRIDENT_IMAGE}
+    env:
+      - HTTPS_PROXY: https://10.127.3.8:8080
+      - HTTP_PROXY: http://10.127.3.8:8080
     workingDir: /
     command: {COMMAND}
     volumeMounts:
